@@ -6,4 +6,8 @@ forked.on('message', (msg) => {
   console.log('Message from child', msg);
 });
 
+forked.on('disconnect', (msg) => {
+  console.log('disc', msg);
+});
+
 forked.send({ hello: 'world' });

@@ -1,7 +1,7 @@
 {
   "name": "js",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://docs.google.com/presentation/d/1KUXtPFMv8Meyi6RAXOZmz1kKvW8khzKgq-jMALKX8QM/edit#slide=id.g6ccf781c7c_0_94",
   "main": "proc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "childprocess": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/di-night/devtalk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/di-night/devtalk/issues"
+  },
+  "homepage": "https://github.com/di-night/devtalk#readme"
 }

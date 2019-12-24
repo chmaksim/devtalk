@@ -1,19 +1,19 @@
 const { spawn } = require('child_process');
 
-const child = spawn('pwd');
-const child = spawn('find', ['.', '-type', 'f']);
+// const child = spawn('cmd.exe', 'dir');
+// //const child = spawn('find', ['.', '-type', 'f']);
 
-child.on('exit', function (code, signal) {
-    console.log('child process exited with ' +
-                `code ${code} and signal ${signal}`);
-});
-child.stdout.on('data', (data) => {
-    console.log(`child stdout:\n${data}`);
-});
+// child.on('exit', function (code, signal) {
+//     console.log('child process exited with ' +
+//                 `code ${code} and signal ${signal}`);
+// });
+// child.stdout.on('data', (data) => {
+//     console.log(`child stdout:\n${data}`);
+// });
   
-child.stderr.on('data', (data) => {
-    console.error(`child stderr:\n${data}`);
-});
+// child.stderr.on('data', (data) => {
+//     console.error(`child stderr:\n${data}`);
+// });
 
 
 // const { spawn } = require('child_process');
@@ -37,3 +37,21 @@ child.stderr.on('data', (data) => {
 // wc.stdout.on('data', (data) => {
 //   console.log(`Number of files ${data}`);
 // });
+
+const bat = spawn('node', ['child.js']);
+
+bat.stdout.on('data', (data) => {
+  console.log(data.toString());
+});
+
+bat.stderr.on('data', (data) => {
+  console.error(data.toString());
+});
+
+bat.on('exit', (code) => {
+  console.log(`Child exited with code ${code}`);
+});
+
+bat.on('disconnect', (code) => {
+    console.log(`C11hild exited with code ${code}`);
+  });
